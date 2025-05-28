@@ -247,3 +247,23 @@ let B = "rainbow"
 let C = ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(A, B), ifnot(A, B)), ifnot(A, B)), ifnot(A, B)), ifnot(A,B)), ifnot(A,B), ifnot(A, B)), ifnot(A,B))
 output C
 ```
+
+```
+let A = "All dinosaurs eat meat."
+let B = "Sam is a dog."
+let C = "Some dinosaurs eat meat."
+let D = "Sam is a dinosaur."
+let E = "Some dinosaurs eat Sam."
+let F = "Sam eats meat."
+
+let G = ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(A, B), ifnot(C, D)), ifnot(E, D)), ifnot(E, C)), ifnot(E,A)), ifnot(A,A), ifnot(A, C)), ifnot(C,C))
+output G
+```
+
+
+
+
+
+
+
+
