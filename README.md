@@ -7,6 +7,7 @@ can substitute for NAND, therefore acting as a universal operator
 (crazy daydream)(formal proof forthcoming)
 
 # idea for combining into one function
+thanks to [loudercake](https://github.com/loudercake) for this idea
 
 presuming the if operator can be combined with the not operator to become
 entirely equivalent to the NAND operator, we can combine them into a single
