@@ -171,7 +171,9 @@ we can add an alternative human language interpretation of each
 logical situation.
 
 NOT-(it is raining, take my umbrella) means
+
 "Either it is raining or I take my umbrella" 
+
 
 A -> NOT-B means
 "if it is raining then I do NOT take my umbrella"
@@ -184,8 +186,11 @@ How, then, can we get from here to our original conditional statement of:
 
 The answer is absurdly easy. We simply take the opposite of B for the
 starting value:
+
 let A = "It is raining."
+
 let B = "I do NOT take my umbrella."
+
 
 A -> B
 "If it is raining, then I do NOT take my umbrella."
@@ -195,3 +200,4 @@ A -> NOT-B
 
 A NAND B
 "Either it is raining or I don't take my umbrella"
+
