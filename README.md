@@ -201,3 +201,31 @@ A -> NOT-B
 A NAND B
 "Either it is raining or I don't take my umbrella"
 
+For the sake of this convenience, we rename this operator as "ifnot".
+Again, it is logically equivalent to NAND in every way,
+we are simply calling it "ifnot".
+
+# Nested ifnots
+
+Now let us explore what we can do logically and linguistically by using this operator
+as its own input.
+
+let A = "It is raining."
+
+let B = "I do NOT take my umbrella."
+
+A ifnot B = ifnot(A,B)
+
+ifnot(A,B) = "If it is raining, then I take my umbrella."
+
+ifnot(ifnot(A,B), B) = "If (If it is raining, then I take my umbrella), then I take my umbrella"
+i.e. if the rule is true, then I take my umbrella (not if the condition it is raining is true)
+
+ifnot(ifnot(A,B), ifnot(B,A)) = "If( if it is raining then I take my umbrella) then (if I take my umbrella then it is raining)."
+i.e. if A->B then B->A, also known as biconditional
+Biconditional is one of the 16 basic truth tables for operators on binary values of A, B.
+
+We can use other nested ifnots to create the other 14 as well (remember that ifnot itself is NAND):
+
+...
+
