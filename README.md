@@ -241,7 +241,9 @@ We can use other nested ifnots to create the other 14 as well (remember that ifn
 
 # Example code
 
+```
 let A = "cheese"
 let B = "rainbow"
 let C = ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(A, B), ifnot(A, B)), ifnot(A, B)), ifnot(A, B)), ifnot(A,B)), ifnot(A,B), ifnot(A, B)), ifnot(A,B))
 output C
+```
