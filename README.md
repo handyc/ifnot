@@ -29,14 +29,88 @@ let B = "I take my umbrella."
 If A -> B
 "If it is raining, then I take my umbrella."
 
+Consider the truth table for the conditional:
+
+A->B
+A B C
+0 0 1
+0 1 1
+1 0 0
+1 1 1
+
+Consider the following human language counterparts to the above table
+and evaluate the statement:
+"If it is raining, then I take my umbrella."
+
+Situation 1: It's not raining (A is false). I don't take my umbrella.
+Analysis: The table returns true, meaning not taking my umbrella follows the rule.
+(it was not raining, so it does not matter if I take the umbrella or not)
+
+Situation 2: It's not raining (A is false). I do take my umbrella.
+Analysis: The table returns true, meaning taking my umbrella also follows the rule.
+(it was not raining, so it does not matter if I take the umbrella or not)
+
+Situation 3: It is raining (A is true). I don't take my umbrella.
+Analysis: The table here returns false, meaning not taking my umbrella breaks the rule.
+(it is raining, and the rule is that when it's raining I take my umbrella)
+
+Situation 4: It is raining (A is true). I do take my umbrella.
+Analysis: The table of course true, meaning taking my umbrella follows the rule.
+(it is raining, so I take the umbrella, which is identical to the rule)
+
+Now consider the truth table for NAND, often used as a universal operator:
+
+NAND
+A B C
+0 0 1
+0 1 1
+1 0 1
+1 1 0
+
+Here we describe a situation in which the output is true in cases where
+it is not true that both A and B are true. In other words, we output true
+unless both A and B are both true.
+
+How would this look in terms of human language?
+Because the truth table returns different values, we must
+revise our human language equivalent with the same A and B as above:
+
+NOT-(it is raining, take my umbrella) 
+means
+"Either it is raining or I take my umbrella" 
+
+Situation 1: It's not raining (A is false). I don't take my umbrella.
+Analysis: The table returns true, meaning not taking my umbrella follows the rule.
+
+Situation 2: It's not raining (A is false). I do take my umbrella.
+Analysis: The table returns true, meaning taking my umbrella also follows the rule.
+
+Situation 3: It is raining (A is true). I don't take my umbrella.
+Analysis: The table here returns true, meaning not taking my umbrella follows the rule.
+This is the situation in which it it raining and I do not take my umbrella,
+which may seem foolish in the world but follows the logical rule of
+NOT (it is raining, take my umbrella)
+
+Situation 4: It is raining (A is true). I do take my umbrella.
+Analysis: The table here returns false, meaning taking my umbrella breaks the rule.
+Once again, the truth table does not line up with what we might expect a person to do,
+as we cannot satisfy the function when both it is raining and take my umbrella
+are true.
+
+# transforming if into NAND
+
+Since we already know that NAND is a universal operator, if we could perhaps
+combine the if table with the table of some other operator (e.g. NOT), it seemed
+it should be possible to build a function that is logically equivalent to NAND.
+
 ...
 
 # idea for combining into one function
 thanks to [loudercake](https://github.com/loudercake) for this idea
 
-presuming the if operator can be combined with the not operator to become
-entirely equivalent to the NAND operator, we can combine them into a single
-operator that governs the entire language
+Presuming the if operator can be combined with the not operator to become
+entirely equivalent to the NAND operator, we can perhaps further combine them into a single
+operator that governs the entire language.
 
 # a Turing complete language with one operator
 
@@ -45,6 +119,8 @@ language and it can be used to create programs that are logically equivalent
 to programs in any other Turing complete language.
 
 # OCaml implementation coming soon
+
+...
 
 # Update
 
@@ -74,3 +150,38 @@ A B C
 0 1 1
 1 0 1
 1 1 0
+
+# Conclusion
+
+A -> NOT-B is logically equivalent to A NAND B.
+
+Consider once again our human language analyis of A NAND B.
+But now that we know that A NAND B is equivalent to A -> NOT-B
+we can add an alternative human language interpretation of each
+logical situation.
+
+NOT-(it is raining, take my umbrella) means
+"Either it is raining or I take my umbrella" 
+
+A -> NOT-B means
+"if it is raining then I do NOT take my umbrella"
+
+The truth table and all of the logic involved remain exactly the same,
+but only the human language interpretation has changed.
+
+How, then, can we get from here to our original conditional statement of:
+"If it is raining, then I take my umbrella."
+
+The answer is absurdly easy. We simply take the opposite of B for the
+starting value:
+let A = "It is raining."
+let B = "I do NOT take my umbrella."
+
+A -> B
+"If it is raining, then I do NOT take my umbrella."
+
+A -> NOT-B
+"If it is raining, then I take my umbrella."
+
+A NAND B
+"Either it is raining or I don't take my umbrella"
