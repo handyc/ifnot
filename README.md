@@ -9,12 +9,26 @@ can substitute for NAND, therefore acting as a universal operator
 # history
 
 After learning that the NAND operator can be used as a logical substitute for all other operators,
-I decided to create a language around this idea [nandle](https://github.com/handyc/nandle)
+I decided to create a language around this [idea](https://github.com/handyc/nandle).
 The project did not get very far, mainly because there did not seem to be much application for it.
 While chewing on the other 15 logical operators, I had the idea that if NAND and NOR were well
 recognized as universal operators, then the other operators must be known not to be universal.
 I further reasoned that the addition of one additional operator in combination with the if operator
 could be sufficient to act as a logical substitute for NAND.
+
+# if
+
+the "if" or "conditional" operator is one of exactly 16 truth tables that can be generated
+for binary relationships between A and B. We call this the conditional in the sense of
+A leading to B, but it is important to remember that the table is simply an arrangement of
+outcomes and has no intrinsic "meaning" in terms of human language. All 16 of these truth
+tables have common names such as AND, OR, XOR and so forth, but those are only imposed
+descriptions based on how those tables appear to follow closely with real-world analogues
+of "and", "or" etc. But more often these logical operators do not correspond 1:1 with
+situation in actual worlds.
+
+In the following sections we explore a hypothetical function "ifnot" that acts as a complete
+logical substitute for NAND. Then, we create an actual working function that works as intended.
 
 # but why?
 
