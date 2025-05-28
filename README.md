@@ -31,12 +31,14 @@ If A -> B
 
 Consider the truth table for the conditional:
 
+```
 A->B
 A B C
 0 0 1
 0 1 1
 1 0 0
 1 1 1
+```
 
 Consider the following human language counterparts to the above table
 and evaluate the statement:
@@ -60,12 +62,14 @@ Analysis: The table of course true, meaning taking my umbrella follows the rule.
 
 Now consider the truth table for NAND, often used as a universal operator:
 
+```
 NAND
 A B C
 0 0 1
 0 1 1
 1 0 1
 1 1 0
+```
 
 Here we describe a situation in which the output is true in cases where
 it is not true that both A and B are true. In other words, we output true
@@ -130,26 +134,32 @@ table for A -> NOT-B ("ifnot") are identical,
 which means that we may as well just call NAND ifnot instead of attempting
 to fuse the conditional and negation operators together some other way.
 
+```
 NAND
 A B C
 0 0 1
 0 1 1
 1 0 1
 1 1 0
+```
 
+```
 A->B
 A B C
 0 0 1
 0 1 1
 1 0 0
 1 1 1
+```
 
+```
 A->NOT-B
 A B C
 0 0 1
 0 1 1
 1 0 1
 1 1 0
+```
 
 # Conclusion
 
