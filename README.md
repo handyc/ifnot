@@ -205,6 +205,15 @@ For the sake of this convenience, we rename this operator as "ifnot".
 Again, it is logically equivalent to NAND in every way,
 we are simply calling it "ifnot".
 
+# pseudocode description of ifnot
+
+```
+ifnot(string a, string b)
+{
+return !(A AND B);
+}
+```
+
 # Nested ifnots
 
 Now let us explore what we can do logically and linguistically by using this operator
