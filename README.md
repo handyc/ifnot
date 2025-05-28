@@ -45,3 +45,32 @@ language and it can be used to create programs that are logically equivalent
 to programs in any other Turing complete language.
 
 # OCaml implementation coming soon
+
+# Update
+
+After some serious doodling with a real pen on real paper,
+it appears to me that the truth table for NAND and the truth
+table for A -> NOT-B ("ifnot") are identical,
+which means that we may as well just call NAND ifnot instead of attempting
+to fuse the conditional and negation operators together some other way.
+
+NAND
+A B C
+0 0 1
+0 1 1
+1 0 1
+1 1 0
+
+A->B
+A B C
+0 0 1
+0 1 1
+1 0 0
+1 1 1
+
+A->NOT-B
+A B C
+0 0 1
+0 1 1
+1 0 1
+1 1 0
