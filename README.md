@@ -38,9 +38,11 @@ otherwise.
 
 Examples:
 let A = "It is raining."
+
 let B = "I take my umbrella."
 
 If A -> B
+
 "If it is raining, then I take my umbrella."
 
 Consider the truth table for the conditional:
@@ -56,6 +58,7 @@ A B C
 
 Consider the following human language counterparts to the above table
 and evaluate the statement:
+
 "If it is raining, then I take my umbrella."
 
 Situation 1: It's not raining (A is false). I don't take my umbrella.
