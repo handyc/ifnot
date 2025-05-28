@@ -62,18 +62,22 @@ and evaluate the statement:
 "If it is raining, then I take my umbrella."
 
 Situation 1: It's not raining (A is false). I don't take my umbrella.
+
 Analysis: The table returns true, meaning not taking my umbrella follows the rule.
 (it was not raining, so it does not matter if I take the umbrella or not)
 
 Situation 2: It's not raining (A is false). I do take my umbrella.
+
 Analysis: The table returns true, meaning taking my umbrella also follows the rule.
 (it was not raining, so it does not matter if I take the umbrella or not)
 
 Situation 3: It is raining (A is true). I don't take my umbrella.
+
 Analysis: The table here returns false, meaning not taking my umbrella breaks the rule.
 (it is raining, and the rule is that when it's raining I take my umbrella)
 
 Situation 4: It is raining (A is true). I do take my umbrella.
+
 Analysis: The table of course true, meaning taking my umbrella follows the rule.
 (it is raining, so I take the umbrella, which is identical to the rule)
 
@@ -101,18 +105,22 @@ means
 "Either it is raining or I take my umbrella" 
 
 Situation 1: It's not raining (A is false). I don't take my umbrella.
+
 Analysis: The table returns true, meaning not taking my umbrella follows the rule.
 
 Situation 2: It's not raining (A is false). I do take my umbrella.
+
 Analysis: The table returns true, meaning taking my umbrella also follows the rule.
 
 Situation 3: It is raining (A is true). I don't take my umbrella.
+
 Analysis: The table here returns true, meaning not taking my umbrella follows the rule.
 This is the situation in which it it raining and I do not take my umbrella,
 which may seem foolish in the world but follows the logical rule of
 NOT (it is raining, take my umbrella)
 
 Situation 4: It is raining (A is true). I do take my umbrella.
+
 Analysis: The table here returns false, meaning taking my umbrella breaks the rule.
 Once again, the truth table does not line up with what we might expect a person to do,
 as we cannot satisfy the function when both it is raining and take my umbrella
