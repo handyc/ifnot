@@ -18,4 +18,4 @@ the basic idea here is that there is exactly one function for the entire
 language and it can be used to create programs that are logically equivalent
 to programs in any other Turing complete language.
 
-# Ocaml implementation coming soon
+# OCaml implementation coming soon
