@@ -6,6 +6,31 @@ then it should also be true that "if" in combination with one other operator
 can substitute for NAND, therefore acting as a universal operator
 (crazy daydream)(formal proof forthcoming)
 
+# history
+
+After learning that the NAND operator can be used as a logical substitute for all other operators,
+I decided to create a language around this idea [nandle](https://github.com/handyc/nandle)
+The project did not get very far, mainly because there did not seem to be much application for it.
+While chewing on the other 15 logical operators, I had the idea that if NAND and NOR were well
+recognized as universal operators, then the other operators must be known not to be universal.
+I further reasoned that the addition of one additional operator in combination with the if operator
+could be sufficient to act as a logical substitute for NAND.
+
+# but why?
+
+While an entire language made from only combinations of if and not may seem to have limited utility,
+it allows for certain fruitful explorations in language and logic that would be difficult to achieve
+otherwise.
+
+Examples:
+let A = "It is raining."
+let B = "I take my umbrella."
+
+If A -> B
+"If it is raining, then I take my umbrella."
+
+...
+
 # idea for combining into one function
 thanks to [loudercake](https://github.com/loudercake) for this idea
 
