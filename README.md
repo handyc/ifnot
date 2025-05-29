@@ -289,10 +289,60 @@ let G = ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(ifnot(A, B), ifnot(C, D)), ifn
 output G
 ```
 
+# Key concepts
 
+ifnot(0,0) == TRUE
+ifnot(1,1) == FALSE
 
+# 16 operators
 
+```
+A B | R     A B | R     A B | R     A B | R   
+----|---    ----|---    ----|---    ----|---  
+0 0 | 0     0 0 | 0     0 0 | 0     0 0 | 0   
+0 1 | 0     0 1 | 0     0 1 | 0     0 1 | 0   
+1 0 | 0     1 0 | 0     1 0 | 1     1 0 | 1   
+1 1 | 0     1 1 | 1     1 1 | 0     1 1 | 1   
+   
+A B | R     A B | R     A B | R     A B | R   
+----|---    ----|---    ----|---    ----|---  
+0 0 | 0     0 0 | 0     0 0 | 0     0 0 | 0   
+0 1 | 1     0 1 | 1     0 1 | 1     0 1 | 1   
+1 0 | 0     1 0 | 0     1 0 | 1     1 0 | 1   
+1 1 | 0     1 1 | 1     1 1 | 0     1 1 | 1   
+   
+A B | R     A B | R     A B | R     A B | R   
+----|---    ----|---    ----|---    ----|---  
+0 0 | 1     0 0 | 1     0 0 | 1     0 0 | 1   
+0 1 | 0     0 1 | 0     0 1 | 0     0 1 | 0   
+1 0 | 0     1 0 | 0     1 0 | 1     1 0 | 1   
+1 1 | 0     1 1 | 1     1 1 | 0     1 1 | 1   
+   
+A B | R     A B | R     A B | R     A B | R   
+----|---    ----|---    ----|---    ----|---  
+0 0 | 1     0 0 | 1     0 0 | 1     0 0 | 1   
+0 1 | 1     0 1 | 1     0 1 | 1     0 1 | 1   
+1 0 | 0     1 0 | 0     1 0 | 1     1 0 | 1   
+1 1 | 0     1 1 | 1     1 1 | 0     1 1 | 1   
+```
 
-
+```
+0 ifnot(1,1) == null (false)
+1 ? AND
+2 ? inhibition A AND NOT-B
+3 ? transfer (A)
+4 ? inhibition B AND NOT-A
+5 ? transfer (B)
+6 ? XOR
+7 ? OR
+8 ? NOR
+9 ? equivalence (XNOR), iff A then B
+10 ? NOT-B
+11 ifnot(B, NOT-A)= implication (if B then A)
+12 NOT-A
+13 ifnot(A, NOT-B) == implication (if A then B)
+14 ifnot(A, B) == NAND
+15 ifnot(0,0) == identity (true)
+```
 
 
