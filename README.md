@@ -25,7 +25,7 @@ outcomes and has no intrinsic "meaning" in terms of human language. All 16 of th
 tables have common names such as AND, OR, XOR and so forth, but those are only imposed
 descriptions based on how those tables appear to follow closely with real-world analogues
 of "and", "or" etc. But more often these logical operators do not correspond 1:1 with
-situation in actual worlds.
+situations in actual worlds.
 
 In the following sections we explore a hypothetical function "ifnot" that acts as a complete
 logical substitute for NAND. Then, we create an actual working function that works as intended.
